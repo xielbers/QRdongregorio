@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+<body>
+    <script>// Obtener la información del dispositivo
+        const infoDispositivo = {
+            'Navegador': window.navigator.userAgent,
+            'Sistema Operativo': window.navigator.platform,
+            'Tipo de Dispositivo': window.navigator.product,
+            'Versión del Navegador': window.navigator.appVersion,
+            'Idioma del Navegador': window.navigator.language,
+            'Resolución de la Pantalla': `${window.screen.width}x${window.screen.height}`,
+        };
+        
+        // Construir el mensaje con la información del dispositivo
+        let mensaje = 'Información del Dispositivo:\n';
+        for (const propiedad in infoDispositivo) {
+            mensaje += `${propiedad}: ${infoDispositivo[propiedad]}\n`;
+        }
+        
+        // Mostrar la alerta con la información del dispositivo
+        alert(mensaje);
+        </script>
+</body>
+</html>
